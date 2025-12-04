@@ -12,3 +12,7 @@ local map = vim.keymap.set
 -- Half-page scroll while keeping cursor centered (like <C-d>zz / <C-u>zz)
 map("n", "<C-d>", "<C-d>zz", { desc = "Half-page down and center" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half-page up and center" })
+
+-- Search and Replace in Visual Selection
+-- Press <leader>r while text is selected
+vim.keymap.set("x", "<leader>r", ":s/\\%V//gI<Left><Left><Left><Left>", { desc = "Replace in Selection" })
