@@ -21,11 +21,20 @@ return {
     },
   },
 
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+    },
+  },
+
   -- Tell LazyVim which one to use by default
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "solarized-osaka",
     },
   },
 }
