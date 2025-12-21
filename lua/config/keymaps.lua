@@ -18,3 +18,16 @@ map("n", "<C-u>", "<C-u>zz", { desc = "Half-page up and center" })
 map("x", "<leader>r", ":s/\\%V//gI<Left><Left><Left><Left>", { desc = "Replace in Selection" })
 map("n", "<tab>", ":bnext<CR>")
 map("n", "<s-tab>", ":bprev<CR>")
+map("i", "jj", "<Esc>")
+map("i", "JJ", "<Esc>")
+
+
+-- Keep cursor centered when searching
+map("n", "n", "nzzzv", { desc = "Next search result centered" })
+map("n", "N", "Nzzzv", { desc = "Prev search result centered" })
+
+-- Select all
+map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
+
+-- Delete all buffers
+map("n", "<leader>ba", "<cmd>%bd<cr>", { desc = "Delete all buffers" })
