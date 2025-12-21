@@ -31,3 +31,6 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 
 -- Delete all buffers
 map("n", "<leader>ba", "<cmd>%bd<cr>", { desc = "Delete all buffers" })
+
+-- Close buffer (preserves window layout)
+map("n", "<leader>x", function() Snacks.bufdelete() end, { desc = "Close buffer" })
