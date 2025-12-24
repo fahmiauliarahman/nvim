@@ -1,17 +1,13 @@
 return {
-  "Redoxahmii/json-to-types.nvim",
-  build = "sh install.sh npm", -- Uses npm to install the underlying CLI tool
-  keys = {
-    {
-      "<leader>cJ",
-      "<CMD>ConvertJSONtoLang typescript<CR>",
-      desc = "Convert JSON to TypeScript Interfaces",
+  {
+    "fahmiauliarahman/json2go.nvim",
+    ft = "go",
+    config = function()
+      require("json2go").setup()
+    end,
+    keys = {
+      { "<leader>jg", "<cmd>Json2Go<cr>", desc = "JSON to Go struct (clipboard)" },
+      { "<leader>js", "<cmd>Json2GoSelection<cr>", mode = "v", desc = "JSON to Go struct (selection)" },
     },
-    {
-      "<leader>cg",
-      "<CMD>ConvertJSONtoLang go<CR>",
-      desc = "Convert JSON to Go Structs",
-    },
-    -- You can add other languages supported by the plugin here
   },
 }

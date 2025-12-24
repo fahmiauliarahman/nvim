@@ -1,6 +1,10 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    -- Required for droid.nvim
+    input = {},
+    terminal = {},
+
     -- Explorer side bar
     explorer = {
       enabled = true,
