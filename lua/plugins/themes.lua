@@ -26,7 +26,9 @@ return {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+      terminal_colors = false,
+    },
   },
 
   -- Tell LazyVim which one to use by default
