@@ -14,9 +14,8 @@ return {
       -- and use this instead:
       --
       opts.formatters_by_ft.python = {
+        "ruff_organize_imports",
         "ruff_format",
-        "black",
-        stop_after_first = true, -- only run the first formatter that exists
       }
     end,
   },
