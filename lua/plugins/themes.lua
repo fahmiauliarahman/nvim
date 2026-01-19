@@ -6,7 +6,7 @@ return {
     priority = 1000, -- load before other UI plugins
     opts = {
       style = "night", -- "storm", "moon", "night", "day"
-      transparent = false,
+      transparent = true,
     },
   },
 
@@ -18,7 +18,7 @@ return {
     priority = 1000,
     opts = {
       flavour = "mocha",
-      -- transparent_background = true,
+      transparent_background = true,
     },
   },
 
@@ -36,7 +36,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }

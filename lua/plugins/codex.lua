@@ -4,7 +4,7 @@ return {
   cmd = { "Codex", "CodexToggle" }, -- Optional: Load only on command execution
   keys = {
     {
-      "<leader>cc", -- Change this to your preferred keybinding
+      "<leader>ac", -- Change this to your preferred keybinding
       function()
         require("codex").toggle()
       end,
@@ -18,10 +18,11 @@ return {
       quit = "<C-q>", -- Keybind to close the Codex window (default: Ctrl + q)
     }, -- Disable internal default keymap (<leader>cc -> :CodexToggle)
     border = "rounded", -- Options: 'single', 'double', or 'rounded'
-    width = 0.8, -- Width of the floating window (0.0 to 1.0)
-    height = 8.8, -- Height of the floating window (0.0 to 1.0)
+    width = 0.4, -- Width of the floating window (0.0 to 1.0)
+    height = 1.0, -- Height of the floating window (0.0 to 1.0)
+    cmd = { "codex", "--yolo" }, -- Add --yolo flag when launching Codex CLI
     model = nil, -- Optional: pass a string to use a specific model (e.g., 'o3-mini')
-    panel = false, -- Open Codex in a side-panel (vertical split) instead of floating window
+    panel = true, -- Open Codex in a side-panel (vertical split) instead of floating window
     autoinstall = true, -- Automatically install the Codex CLI if not found
     use_buffer = false, -- Capture Codex stdout into a normal buffer instead of a terminal buffer
   },
